@@ -9,13 +9,12 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Mebane521@localhost:5432/petfax'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False             
     
-    #DB config
     from . import models
     models.db.init_app(app)
     migrate= Migrate(app, models.db)
     #index
     @app.route('/')
-    def hello():
+    def index():
         return 'Hello,PetFax!'
 
     #register pet blueprint

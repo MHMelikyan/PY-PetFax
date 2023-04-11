@@ -6,7 +6,7 @@ def create_app():
     app = Flask(__name__)
      
      #DB connect
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Mebane521@localhost:5432/petfax'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://login:password@localhost:5432/petfax'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False             
     
     from . import models
